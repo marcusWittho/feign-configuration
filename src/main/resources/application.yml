@@ -8,8 +8,4 @@ feign:
         conenctTimeout: 5000
         readTimeout: 5000
 
-logging.level.com.feign.project2.repository.*: DEBUG
-
-sample:
-  client:
-    url: "http://localhost:8081/user"
+logging.level.com.feign.project2.repository.UserEndpoint: DEBUG

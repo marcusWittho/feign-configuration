@@ -18,7 +18,7 @@ public class UserController {
   @RequestMapping(path = "/user/{taskId}")
   public Object getUser(@PathVariable("taskId") String taskId,
       @RequestHeader("Authorization") String token) {
-    
+
     return userEndpoint.getTask(taskId, token);
   }
 }
