@@ -9,3 +9,7 @@ feign:
         readTimeout: 5000
 
 logging.level.com.feign.project2.repository.UserEndpoint: DEBUG
+
+sample:
+  client:
+    urlClickup: "https://api.clickup.com/api/v2"

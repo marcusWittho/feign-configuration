@@ -15,10 +15,17 @@ public class UserController {
     this.userEndpoint = userEndpoint;
   }
 
-  @RequestMapping(path = "/user/{taskId}")
-  public Object getUser(@PathVariable("taskId") String taskId,
+  @RequestMapping(path = "user/{taskId}")
+  public Object getByTaskId(@PathVariable("taskId") String taskId,
       @RequestHeader("Authorization") String token) {
 
-    return userEndpoint.getTask(taskId, token);
+    return userEndpoint.getByTaskId(taskId, token);
+  }
+
+  @RequestMapping(path = "user/list/{listId}")
+  public Object getAllTasks(@PathVariable("listId") String listId,
+    @RequestHeader("Authorization") String token) {
+
+    return userEndpoint.getAllTasks(listId, token);
   }
 }
